@@ -6,3 +6,5 @@
 3. `volta pin node@latest` & `volta pin yarn@latest`
 4. modify `.gitignore`
    1. [Which files should be gitignored? (yarnpkg.com)](https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored)
+      1. using Zero-Installs
+5. `yarn install`
