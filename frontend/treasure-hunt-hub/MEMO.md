@@ -8,6 +8,8 @@
    1. [Which files should be gitignored? (yarnpkg.com)](https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored)
       1. using Zero-Installs
 5. `yarn install`
+6. `yarn dlx @yarnpkg/sdks vscode`
+   1. ts2307エラーを解決する方法
 ## yarnのZero-Installsについて
 - 参考サイト:  [Cache strategies (yarnpkg.com)](https://yarnpkg.com/features/caching)
 ### Offline mirror
@@ -20,3 +22,9 @@
   - デフォルトでキャッシュは`.yarn/cache`にある
   - 実際には`.yarn/cache`と`.pnp.*`をgitに追加する
 - プロジェクトに`yarn`を導入するときの`.gitignore`の書き方は[Which files should be gitignored? (yarnpkg.com)](https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored)を見る
+
+## ts2307エラー
+- モジュールを発見できないというエラー
+  - npmならばnode_moduleフォルダを参照するが、yarnを使っているのでnode_moduleフォルダを発見できずに、こういうエラーが発生するよう
+- `yarn dlx @yarnpkg/sdks vscode`を用いてvscodeにnode_moduleではないフォルダを参照するように設定する
+
