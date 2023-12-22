@@ -28,3 +28,14 @@
   - npmならばnode_moduleフォルダを参照するが、yarnを使っているのでnode_moduleフォルダを発見できずに、こういうエラーが発生するよう
 - `yarn dlx @yarnpkg/sdks vscode`を用いてvscodeにnode_moduleではないフォルダを参照するように設定する
 
+## tailwind.config.jsの設定
+- [tailwindcssを指定のディレクトリに反映させる方法](https://tailwindcss.com/docs/content-configuration)
+  - `tailwind.config.js`を作成する
+    - `**`は0個以上のディレクトリ
+    - `*`は/と隠しファイルを除くすべてのファイル
+
+## モジュールパスのエイリアス
+- [Absolute Imports and Module Path Aliases](https://nextjs.org/docs/app/building-your-application/configuring/absolute-imports-and-module-aliases)
+  - `tsconfig.json`で設定が行われている
+  - `"paths": {"@/*": ["./src/*"]}`
+
