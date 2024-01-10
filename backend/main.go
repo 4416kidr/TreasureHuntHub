@@ -2,6 +2,9 @@ package main
 
 import (
 	"fmt"
+	"net/http"
+
+	"github.com/labstack/echo/v4"
 )
 
 type Store struct {
@@ -31,4 +34,9 @@ func gen_store_date(count int) []Store {
 func main() {
 	store_data := gen_store_date(20)
 	fmt.Println(store_data)
+	e := echo.New()
+	e.GET("/", func(c echo.Context) error {
+		return c.String(http.StatusOK, "Hello, World!")
+	})
+	e.Logger.Fatal(e.Start(":1323"))
 }
