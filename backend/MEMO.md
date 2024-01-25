@@ -39,7 +39,8 @@
   - 参考: [HTTPメソッド4種類(GET,POST,PUT,DELETE)について概要と違いを理解する
 ](https://developers-book.com/2020/07/20/140/)
 
-### 配列 (文法)
+### Golangの文法
+#### 配列
 
 - Arrays: 固定長の配列
 - Slices: 可変超配列
@@ -47,7 +48,13 @@
   - `slice = append(slice "hello")`で要素追加
   - 参考: [【Go】基本文法④(配列・スライス)](https://qiita.com/k-penguin-sato/items/daad9986d6c42bdcde90)
 
-### echoのホットリロード
+#### stringからintへの変換
+
+- `strconv`という標準パッケージを使う
+  - `a, _ := strconv.Atoi("7")`のようにする
+  - [【Golang】文字列と数値の変換(strconv)](https://qiita.com/mei4n/items/308e75092e2a058d75f2)
+
+### echoのホットリロード（作業中）
 
 - ファイルを変更するたびにechoサーバーを立ち上げ直さないといけない
   - Airなるものを使えばホットリロードを実現できるみたい
