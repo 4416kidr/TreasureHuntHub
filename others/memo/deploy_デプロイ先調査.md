@@ -1,10 +1,12 @@
 # デプロイ先調査
 
 ## 本サービスについて
+
 - 本サービスはSNS的な側面があるため、静的サイトではない。そのため、Cloudflare Pagesなどの静的サイトホスティングサービスは使えない。
 - Vercelも静的サイトホスティングサービスだった気がする。
 
 ## 条件
+
 - 無料で運用することを考えている
 - 可用性をある程度犠牲にする
   - スリープは許容する
@@ -13,6 +15,7 @@
 - クレジットカードの登録が不要
 
 ## デプロイ方法の選択肢
+
 - dockerイメージにして、イメージをデプロイする
 - 色々なサービスを組み合わせて、一つのサービスとして運用する
   - DBのサービスとバックエンド、フロントエンドみたいな感じ
@@ -21,6 +24,7 @@
 
 ## 複数サービスの組み合わせ
 ### PaaS
+
 - Fly.io
   - メモリ256MBのVMを3つ使える
     - 貧弱なVMだが、3つも使える
@@ -44,7 +48,9 @@
     - 期間などの調査は必要
   - スリープモードもないらしい
   - ドキュメントが少なく、ハードルが高いことが難点らしい
+
 ### DB
+
 - PlanetScale
   - MySQLベースで無料枠が大きい
 - CockroachDB serverless
@@ -53,15 +59,17 @@
   - 上記の制限内であれば、DBは作り放題である可能性がある
 
 ## 参考サイト
+
 - [サヨナラHeroku 〜アプリケーションの知識だけで本番稼働を実現できる無料のプラットフォームを追い求めて〜（zenn.dev）](https://zenn.dev/imah/articles/a41e889dbf54da)
   - 基本このサイトを参考にした
-- [Web サービスを無料で手軽にモダンなインフラにデプロイしよう！ (zenn.dev) ](https://zenn.dev/lovegraph/articles/56f8d5f28ba1c3)
-- [Which Cloud Database Platform to Choose for Your Applications (koyeb.com) ](https://www.koyeb.com/blog/which-cloud-database-platform-to-choose-for-your-applications)
+- [Web サービスを無料で手軽にモダンなインフラにデプロイしよう！ (zenn.dev)](https://zenn.dev/lovegraph/articles/56f8d5f28ba1c3)
+- [Which Cloud Database Platform to Choose for Your Applications (koyeb.com)](https://www.koyeb.com/blog/which-cloud-database-platform-to-choose-for-your-applications)
   - 各種DBサービスが紹介されている
   - 英語なので、まだ読んでいない
 
 ## その他の参考サイト
-- [Golang(echo)のAPIをrenderでデプロイする方法 (zenn.dev) ](https://zenn.dev/keishi_lcc/articles/c40fcb9d2c589d)
+
+- [Golang(echo)のAPIをrenderでデプロイする方法 (zenn.dev)](https://zenn.dev/keishi_lcc/articles/c40fcb9d2c589d)
   - Golangのrenderへのデプロイ例
 - [静的/動的サイト｜HTTPの仕組み(パケットキャプチャで学ぼう！) (zenn.dev)](https://zenn.dev/masahiro_toba/books/3daf7dc0d5dfd7/viewer/91164b)
   - 静的サイト: 内容が変化しない
